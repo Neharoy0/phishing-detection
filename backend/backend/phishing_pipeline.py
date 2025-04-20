@@ -189,6 +189,6 @@ def extract_and_predict_emails(email_user, email_pass, num_emails=5):
 if __name__ == "__main__":
     from pprint import pprint
 
-    EMAIL = "neharoy.proj@gmail.com"
-    PASS = "ldem hpjb irtq qheu"
+    EMAIL = "<<enter your email>>"
+    PASS = "<<enter app pwd>>"
     pprint(extract_and_predict_emails(EMAIL, PASS, num_emails=5))
