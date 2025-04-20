@@ -45,7 +45,7 @@ model_path = os.path.join(
 model.load_state_dict(torch.load(model_path, map_location=torch.device("cpu")))
 model.eval()
 
-VT_API_KEY = "your-virustotal-api-key"
+VT_API_KEY = "29bf6da50274c54d7890657c41cf739c5eabd6b7513b5de8854ce24ba5c16325"
 
 
 def clean_email_body(text):
@@ -151,15 +151,30 @@ def extract_and_predict_emails(email_user, email_pass, num_emails=5):
                 prediction = torch.argmax(output, dim=1).item()
                 label = "Phishing" if prediction == 1 else "Safe"
 
+            # Determine final verdict based on body + URLs
+            has_malicious_or_suspicious_url = any(
+                verdict in ["malicious", "suspicious"] for verdict in url_verdicts.values()
+            )
+
+            if has_malicious_or_suspicious_url:
+                final_status = "malicious"
+            elif prediction == 1:
+                final_status = "suspicious"
+            else:
+                final_status = "clean"
+
+
             emails_data.append(
                 {
                     "subject": subject,
                     "from": sender,
                     "date": date,
                     "body": cleaned_body[:500],  # Limit size of email body
-                    "is_phishing": prediction == 1,
+                    #"is_phishing": prediction == 1,
+                    "model_prediction": "Phishing" if prediction == 1 else "Safe",
                     "url_verdicts": url_verdicts,  # Add URL verdicts to each email
                     "urls": urls,  # Add the extracted URLs
+                    "status": final_status,
                 }
             )
 

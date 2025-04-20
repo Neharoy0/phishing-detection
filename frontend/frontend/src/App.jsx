@@ -23,7 +23,8 @@ function App() {
             date: email.date || 'Unknown date',
             body: email.body || 'No email body available',
             urls: email.urls || [],
-            status: email.status || (email.urls?.length > 0 ? 'suspicious' : 'clean'),
+            //status: email.status || (email.urls?.length > 0 ? 'suspicious' : 'clean'),
+            status: email.status,  // backend provides the final verdict now
           }));
           setEmails((prevEmails) => {
             const allEmails = [...prevEmails, ...parsedData];
