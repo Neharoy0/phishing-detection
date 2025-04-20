@@ -1,5 +1,5 @@
 import React from 'react';
-
+//
 export function EmailDetail({ email }) {
   return (
     <div className="email-detail">
