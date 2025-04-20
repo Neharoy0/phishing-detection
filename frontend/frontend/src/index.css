@@ -1,0 +1,230 @@
+body {
+  background: #17192b;
+  color: #f4f4f4;
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-root {
+  min-height: 100vh;
+  padding: 1.5rem;
+  background: #17192b;
+}
+
+.dashboard-header h1 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #ff3399;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+
+/* Top section with pie chart and stats */
+.dashboard-top-section {
+  margin-bottom: 2rem;
+}
+
+.stats-pie-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.pie-card {
+  background: #23243a;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.pie-legend {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 0.5;
+}
+
+.stat-card {
+  background: #23243a;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #a8a9bc;
+  margin-bottom: 0.3rem;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.stat-total-value {
+  color: #ff3399;
+  font-size: 2.2rem;
+}
+
+/* Main section with email list and details */
+.dashboard-main-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  height: calc(100vh - 300px);
+  min-height: 400px;
+}
+
+.email-list-container, .email-detail-container {
+  background: #23243a;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panel-title {
+  font-size: 1.1rem;
+  color: #ff3399;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+}
+
+.email-list {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.email-item {
+  background: #1a1b2e;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.email-item:hover {
+  background: #252639;
+}
+
+.email-item.selected {
+  border-left: 3px solid #ff3399;
+}
+
+.email-item-line {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.email-item-status {
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.email-detail {
+  padding: 0.5rem;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.email-detail h3 {
+  color: #ff3399;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.email-detail p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.email-body {
+  background: #1a1b2e;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.email-detail-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #a8a9bc;
+  font-size: 1.1rem;
+}
+
+.url-list {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.url-list li {
+  margin-bottom: 0.5rem;
+}
+
+.url-list a {
+  color: #5e9eff;
+  text-decoration: none;
+}
+
+.url-list a:hover {
+  text-decoration: underline;
+}
+
+.no-emails {
+  text-align: center;
+  color: #a8a9bc;
+  margin-top: 2rem;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .stats-pie-container {
+    flex-direction: column;
+  }
+  
+  .dashboard-main-section {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .email-list-container, .email-detail-container {
+    height: 400px;
+  }
+}

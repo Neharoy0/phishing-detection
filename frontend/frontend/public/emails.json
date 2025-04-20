@@ -1,0 +1,182 @@
+[
+  {
+    "sender": "example1@example.com",
+    "subject": "Important: Your Account Security",
+    "body": "Click this link to verify your account: http://malicious-url.com",
+    "timestamp": "2025-04-12T09:00:00Z",
+    "status": "sus",
+    "highlightedPhrases": ["verify your account", "urgent"],
+    "urls": [
+      {
+        "originalUrl": "http://malicious-url.com",
+        "resolvedUrl": "http://example.com/verified",
+        "domain": "malicious-url.com",
+        "vtScore": 75,
+        "status": "malicious",
+        "ip": "192.168.0.1",
+        "hash": "abc123xyz",
+        "flaggedBy": ["Vendor1", "Vendor2"]
+      }
+    ]
+  },
+  {
+    "sender": "example2@example.com",
+    "subject": "Your Weekly Newsletter",
+    "body": "Check out our latest updates at our official website.",
+    "timestamp": "2025-04-12T10:00:00Z",
+    "status": "clean",
+    "highlightedPhrases": [],
+    "urls": [
+      {
+        "originalUrl": "http://official-website.com",
+        "resolvedUrl": "http://official-website.com/home",
+        "domain": "official-website.com",
+        "vtScore": 0,
+        "status": "clean",
+        "ip": "192.168.0.2",
+        "hash": "def456ghi",
+        "flaggedBy": []
+      }
+    ]
+  },
+  {
+    "sender": "example3@example.com",
+    "subject": "Your Invoice is Ready for Payment",
+    "body": "Please pay your outstanding invoice by clicking here: http://phishing-url.com",
+    "timestamp": "2025-04-12T11:00:00Z",
+    "status": "malicious",
+    "highlightedPhrases": ["pay your invoice", "click here"],
+    "urls": [
+      {
+        "originalUrl": "http://phishing-url.com",
+        "resolvedUrl": "http://malicious-site.com/pay",
+        "domain": "phishing-url.com",
+        "vtScore": 90,
+        "status": "malicious",
+        "ip": "192.168.0.3",
+        "hash": "ghi789jkl",
+        "flaggedBy": ["Vendor3", "Vendor4"]
+      }
+    ]
+  },
+  {
+    "sender": "example4@example.com",
+    "subject": "Free Gift Just for You!",
+    "body": "Claim your free gift now! Click here: http://suspicious-link.com",
+    "timestamp": "2025-04-12T12:00:00Z",
+    "status": "sus",
+    "highlightedPhrases": ["free gift", "click here"],
+    "urls": [
+      {
+        "originalUrl": "http://suspicious-link.com",
+        "resolvedUrl": "http://example.com/free-gift",
+        "domain": "suspicious-link.com",
+        "vtScore": 60,
+        "status": "suspicious",
+        "ip": "192.168.0.4",
+        "hash": "jkl012mno",
+        "flaggedBy": ["Vendor5"]
+      }
+    ]
+  },
+  {
+    "sender": "example5@example.com",
+    "subject": "Special Offer Just for You",
+    "body": "Don't miss out on this limited-time offer! http://offer-link.com",
+    "timestamp": "2025-04-12T13:00:00Z",
+    "status": "clean",
+    "highlightedPhrases": [],
+    "urls": [
+      {
+        "originalUrl": "http://offer-link.com",
+        "resolvedUrl": "http://trusted-offer.com",
+        "domain": "offer-link.com",
+        "vtScore": 0,
+        "status": "clean",
+        "ip": "192.168.0.5",
+        "hash": "mno345pqr",
+        "flaggedBy": []
+      }
+    ]
+  },
+  {
+    "sender": "example6@example.com",
+    "subject": "Security Alert: Account Suspended",
+    "body": "Your account has been suspended. Please click this link to restore it: http://fake-url.com",
+    "timestamp": "2025-04-12T14:00:00Z",
+    "status": "malicious",
+    "highlightedPhrases": ["account suspended", "click this link"],
+    "urls": [
+      {
+        "originalUrl": "http://fake-url.com",
+        "resolvedUrl": "http://malicious-url.com/restore",
+        "domain": "fake-url.com",
+        "vtScore": 85,
+        "status": "malicious",
+        "ip": "192.168.0.6",
+        "hash": "pqr678stu",
+        "flaggedBy": ["Vendor6"]
+      }
+    ]
+  },
+  {
+    "sender": "example7@example.com",
+    "subject": "Weekly Newsletter – Updates Inside",
+    "body": "Here's your weekly newsletter with the latest updates. http://newsletter-link.com",
+    "timestamp": "2025-04-12T15:00:00Z",
+    "status": "clean",
+    "highlightedPhrases": [],
+    "urls": [
+      {
+        "originalUrl": "http://newsletter-link.com",
+        "resolvedUrl": "http://official-newsletter.com",
+        "domain": "newsletter-link.com",
+        "vtScore": 0,
+        "status": "clean",
+        "ip": "192.168.0.7",
+        "hash": "stu789vwx",
+        "flaggedBy": []
+      }
+    ]
+  },
+  {
+    "sender": "example8@example.com",
+    "subject": "Action Required: Update Your Account Information",
+    "body": "Click here to update your account details: http://malicious-update.com",
+    "timestamp": "2025-04-12T16:00:00Z",
+    "status": "sus",
+    "highlightedPhrases": ["update your account", "click here"],
+    "urls": [
+      {
+        "originalUrl": "http://malicious-update.com",
+        "resolvedUrl": "http://fake-update.com",
+        "domain": "malicious-update.com",
+        "vtScore": 70,
+        "status": "suspicious",
+        "ip": "192.168.0.8",
+        "hash": "vwx012yz",
+        "flaggedBy": ["Vendor7"]
+      }
+    ]
+  },
+  {
+    "sender": "example9@example.com",
+    "subject": "Invitation to a Secret Event",
+    "body": "You're invited to an exclusive event. RSVP at: http://event-invite.com",
+    "timestamp": "2025-04-12T17:00:00Z",
+    "status": "clean",
+    "highlightedPhrases": [],
+    "urls": [
+      {
+        "originalUrl": "http://event-invite.com",
+        "resolvedUrl": "http://official-event.com",
+        "domain": "event-invite.com",
+        "vtScore": 0,
+        "status": "clean",
+        "ip": "192.168.0.9",
+        "hash": "yz123abc",
+        "flaggedBy": []
+      }
+    ]
+  }
+]
