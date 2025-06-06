@@ -4,8 +4,8 @@ from phishing_pipeline import extract_and_predict_emails
 from flask_cors import cross_origin
 
 # updated
-EMAIL = "neharoy.proj@gmail.com"
-PASS = "ldem hpjb irtq qheu"  # ⚠️ For dev only, remove hardcoded creds in production!
+EMAIL = <<"enter email id here">>
+PASS = <<"enter password">>  # ⚠️ For dev only, remove hardcoded creds in production!
 
 app = Flask(__name__)
 CORS(app, origins=["http://localhost:5173"])
